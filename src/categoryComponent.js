@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 const CategoryComponent = (props) => {
     const [category, setCategory] = useState([]);
     useEffect(() => {
-        fetch('https://ecom-b.herokuapp.com/category/category-list', {
+        fetch('https://ecom-b.herokuapp.com/category-list', {
             method: 'POST',
             headers: {
                 "Accept": "application/json",

@@ -13,6 +13,8 @@ const CategoryComponent = (props) => {
             return response.json();
         }).then((data)=>{
             setCategory(data.data);
+        }).catch((error)=>{
+            return error.message;
         })
     }, []);
 

@@ -3,11 +3,10 @@ const CategoryComponent = (props) => {
     const [category, setCategory] = useState([]);
     useEffect(() => {
         fetch('https://ecom-b.herokuapp.com/category/category-list', {
-            method: 'GET',
+            method: 'POST',
             headers: {
                 "Accept": "application/json",
                 "Content-type": "application/json",
-                'Host': 'https://*.airtableblocks.com'
             }
 
         }).then(function(response) {

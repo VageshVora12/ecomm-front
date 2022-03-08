@@ -6,11 +6,10 @@ const ProductComponent=(props)=>{
     const [imagepath,setImagePath] = useState("");
     useEffect(()=>{
         fetch('https://ecom-b.herokuapp.com/product/product-list',{
-            method:'GET',
+            method:'POST',
             headers:{
                 "Accept":"application/json",
                 "Content-Type":"application/json",
-                'Host': 'https://*.airtableblocks.com'
             },
             // body:JSON.stringify({cateId:props.value.categoryid, sortby:props.value.sortby})
         }).then(function(response){

@@ -54,7 +54,7 @@ const cbw={
        onSubmit={(values, { setSubmitting }) => {
         //  setTimeout(() => {
           //  alert(JSON.stringify(values, null, 2));
-          fetch('http://ecom-b.herokuapp.com/category/category-main',{
+          fetch('https://ecom-b.herokuapp.com/category/category-main',{
               method:'POST',
               headers:{
                 'Accept':'application/json',

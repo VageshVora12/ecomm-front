@@ -35,7 +35,7 @@ import React from 'react';
          setTimeout(() => {
         //    alert(JSON.stringify(values, null, 2));
         // console.log(values);
-        fetch("http://localhost:9000/user/user-main",{
+        fetch("https://ecom-b.herokuapp.com/user/user-main",{
             method: 'POST',
             headers:{
                 "Accept":"application/json",

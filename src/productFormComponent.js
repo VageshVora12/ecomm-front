@@ -17,7 +17,7 @@ import React,{useState,useEffect,useRef} from 'react';
     const imageRef = useRef();
 
     useEffect(()=>{
-        fetch('http://localhost:9000/category/category-list',{
+        fetch('https://ecom-b.herokuapp.com/category/category-list',{
           method:'POST',
           headers:{
               "Accept":"application/json",

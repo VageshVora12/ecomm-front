@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 const CategoryComponent = (props) => {
     const [category, setCategory] = useState([]);
     useEffect(() => {
-        fetch('https://ecom-b.herokuapp.com/category/category-list', {
-            method: 'POST',
+        axios.post('https://ecom-b.herokuapp.com/category/category-list', {
             headers: {
                 "Accept": "application/json",
                 "Content-type": "application/json",

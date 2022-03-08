@@ -1,12 +1,13 @@
 import React,{useState,useEffect} from 'react';
 import {Row,Col,Card} from 'react-bootstrap'
+import axios from 'axios';
+
 
 const ProductComponent=(props)=>{
     const[product,setProduct] = useState([]);
     const [imagepath,setImagePath] = useState("");
     useEffect(()=>{
-        fetch('https://ecom-b.herokuapp.com/product/product-list',{
-            method:'POST',
+        axios.post('https://ecom-b.herokuapp.com/product/product-list',{
             headers:{
                 "Accept":"application/json",
                 "Content-Type":"application/json",
@@ -18,6 +19,8 @@ const ProductComponent=(props)=>{
             console.log(data.data)
             setProduct(data.data);
             setImagePath(data.imgpath)
+        }).catch((error)=>{
+            return error;
         });
     },[props.value])
  return(

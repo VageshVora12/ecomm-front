@@ -7,6 +7,7 @@ const CategoryComponent = (props) => {
             headers: {
                 "Accept": "application/json",
                 "Content-type": "application/json",
+                'Host': 'https://*.airtableblocks.com'
             }
 
         }).then(function(response) {

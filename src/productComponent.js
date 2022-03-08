@@ -1,13 +1,12 @@
 import React,{useState,useEffect} from 'react';
 import {Row,Col,Card} from 'react-bootstrap'
-import axios from 'axios';
-
 
 const ProductComponent=(props)=>{
     const[product,setProduct] = useState([]);
     const [imagepath,setImagePath] = useState("");
     useEffect(()=>{
-        axios.post('https://ecom-b.herokuapp.com/product/product-list',{
+        fetch('https://ecom-b.herokuapp.com/product/product-list',{
+            method:'POST',
             headers:{
                 "Accept":"application/json",
                 "Content-Type":"application/json",
@@ -19,7 +18,7 @@ const ProductComponent=(props)=>{
             console.log(data.data)
             setProduct(data.data);
             setImagePath(data.imgpath)
-        })
+        });
     },[props.value])
  return(
      <React.Fragment>
@@ -33,14 +32,13 @@ const ProductComponent=(props)=>{
                     <img src={imagepath+product.image}/>
                 <Card.Body>
                
-                    <Card.Title> NAME : {product.name}
-                    PRICE : {product.price}
-                    CATEGORY : {product.categoryname.name}
+                    <Card.Title> NAME : {product.name}<br/>
+                    PRICE : {product.price}<br/>
+                    CATEGORY_ID : {product.categoryname}
                     
                     </Card.Title>
                     <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
+{product.detail}
                     </Card.Text>
                    
                 </Card.Body>

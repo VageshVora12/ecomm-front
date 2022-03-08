@@ -71,7 +71,7 @@ import React,{useState,useEffect,useRef} from 'react';
              formData.append('category',values.category)
              formData.append('image',imageRef.current.files[0])
           console.log(formData);
-        fetch("http://localhost:9000/product/product-main",{
+        fetch("https://ecom-b.herokuapp.com/product/product-main",{
             method: 'POST',
             // headers:{
             //     "Accept":"application/json",

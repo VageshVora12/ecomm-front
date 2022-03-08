@@ -19,9 +19,7 @@ const ProductComponent=(props)=>{
             console.log(data.data)
             setProduct(data.data);
             setImagePath(data.imgpath)
-        }).catch((error)=>{
-            return error;
-        });
+        })
     },[props.value])
  return(
      <React.Fragment>

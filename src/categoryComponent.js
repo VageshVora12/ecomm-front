@@ -3,7 +3,7 @@ const CategoryComponent = (props) => {
     const [category, setCategory] = useState([]);
     useEffect(() => {
         fetch('https://ecom-b.herokuapp.com/category/category-list', {
-            method: 'POST',
+            method: 'GET',
             headers: {
                 "Accept": "application/json",
                 "Content-type": "application/json",

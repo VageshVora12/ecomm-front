@@ -6,7 +6,7 @@ const ProductComponent=(props)=>{
     const [imagepath,setImagePath] = useState("");
     useEffect(()=>{
         fetch('https://ecom-b.herokuapp.com/product/product-list',{
-            method:'POST',
+            method:'GET',
             headers:{
                 "Accept":"application/json",
                 "Content-Type":"application/json",
